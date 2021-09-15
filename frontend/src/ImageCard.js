@@ -7,7 +7,7 @@
 */
 function ImageCard({image, children}) {
   return (
-  <div className="card p-1 mb-2">
+  <div className="card p-0 mb-3">
     <p className="card-header">{image.name}</p>
     {children}
     <img className="img-fluid" src={image.path} alt={image.name}/>

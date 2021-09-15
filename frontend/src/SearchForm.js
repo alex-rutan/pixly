@@ -32,7 +32,7 @@ function SearchForm(){
 
   return (
     <form onSubmit={handleSubmit} className="SearchFrom form-group row text-center my-3">
-      <div className="col-10">
+      <div className="col-10 ps-5">
       <input
         name="search"
         placeholder="Enter Search Term..."
@@ -40,7 +40,7 @@ function SearchForm(){
         className="form-control"
       />
       </div>
-      <div className="col-2">
+      <div className="col-2 pe-5">
       <button type="submit" className="btn btn-primary">Submit</button>
       </div>
     </form>

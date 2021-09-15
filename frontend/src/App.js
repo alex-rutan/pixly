@@ -2,7 +2,7 @@ import Nav from "./Nav";
 import Routes from "./Routes";
 import { BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "bootswatch/dist/sandstone/bootstrap.min.css";
+import "bootswatch/dist/yeti/bootstrap.min.css";
 import ImagesContext from "./ImagesContext";
 import PixlyApi from "./api";
 

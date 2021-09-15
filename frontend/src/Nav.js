@@ -8,7 +8,8 @@ function Nav() {
   return (
 
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid p-0">
+      <div className="container-fluid ps-5">
+
       <NavLink className="navbar-brand" exact to="/">
         Pixly
       </NavLink>
