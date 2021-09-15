@@ -14,7 +14,8 @@ import { useState, useEffect } from "react";
  * -isLoading: boolean
  * -image: image object
 */
-function ImageDetails(){
+
+function ImageDetails() {
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [image, setImage] = useState({});
@@ -31,18 +32,18 @@ function ImageDetails(){
   if (isLoading) return <div>Is Loading...</div>;
 
   return (
-  <div className="container">
-    <ImageCard image={image}>
-      <ul>
-        {Object.keys(image).map( key =>{
-          if(image[key]){
-            return <li key={key}> {key} : {image[key]}</li>
-          }
-          return null
-        })}
-      </ul>
-    </ImageCard>
-  </div>)
+    <div className="container">
+      <ImageCard image={image}>
+        {Object.keys(image)
+          .filter(key => key !== "id" && key !== "name" && key !== "filename" && key !== "path")
+          .map(key => {
+            if (image[key]) {
+              return <div className="ps-3" key={key}> {key} : {image[key]}</div>
+            }
+            return null
+          })}
+      </ImageCard>
+    </div>)
 }
 
 export default ImageDetails;
